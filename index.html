@@ -144,11 +144,6 @@
       filter: blur(20px);
     }
     .ht-left, .ht-right { position: relative; z-index: 1; }
-    /* Left column always tops at the row start. Without this, when the
-       right column (terminal) is taller than the left - which can happen
-       at iPad-horizontal aspect ratios - align-items: center on the grid
-       would push the eyebrow down with whitespace above it. */
-    .ht-left { align-self: start; }
 
     /* ─── EYEBROW ─── */
     .ht-eyebrow {
@@ -548,6 +543,19 @@
     @media (max-width: 380px) {
       .ht-cd-grid { gap: 2px; }
       .ht-cd-sep { display: none; }
+    }
+
+    /* iPad horizontal only — tablet-shaped aspect ratios (4:3 to 3:2)
+       above the mobile breakpoint. Standard desktop laptops (16:10 = 1.6,
+       16:9 = 1.78) are excluded by the max-aspect-ratio: 3/2 cutoff.
+       Both columns top-align to each other and the whole row centers
+       vertically so the eyebrow and terminal share a clean top edge
+       with equal whitespace above and below. */
+    @media (min-width: 961px) and (max-aspect-ratio: 3/2) {
+      .ht-hero {
+        align-items: start;
+        align-content: center;
+      }
     }
 
     /* Very short desktop viewports - modest tightening only */
