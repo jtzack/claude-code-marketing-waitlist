@@ -125,8 +125,8 @@
     .ht-hero {
       display: grid;
       grid-template-columns: 1.15fr 1fr;
-      gap: clamp(32px, 3.5vw, 56px);
-      padding: clamp(28px, 5vh, 64px) clamp(24px, 3vw, 48px) clamp(24px, 4vh, 48px);
+      gap: clamp(28px, 3vw, 48px);
+      padding: clamp(20px, 3.5vh, 48px) clamp(24px, 3vw, 48px) clamp(18px, 3vh, 36px);
       max-width: 1320px;
       margin: 0 auto;
       width: 100%;
@@ -150,7 +150,7 @@
       display: inline-flex;
       align-items: center;
       gap: 10px;
-      padding: 6px 12px;
+      padding: 5px 11px;
       border: 1px solid rgba(180, 166, 144, 0.3);
       border-radius: 999px;
       background: rgba(180, 166, 144, 0.05);
@@ -159,7 +159,7 @@
       letter-spacing: 0.16em;
       color: var(--peach);
       text-transform: uppercase;
-      margin-bottom: 22px;
+      margin-bottom: 18px;
     }
     .ht-eb-sep { color: var(--taupe-dim); }
 
@@ -167,12 +167,12 @@
     .ht-h1 {
       font-family: 'Space Grotesk', sans-serif;
       font-weight: 700;
-      font-size: clamp(32px, 4.2vw, 60px);
+      font-size: clamp(26px, 3.4vw, 46px);
       line-height: 1.0;
       letter-spacing: -0.035em;
       text-transform: uppercase;
       color: var(--linen);
-      margin: 0 0 16px;
+      margin: 0 0 14px;
       text-wrap: balance;
     }
     .ht-money { color: var(--orange); white-space: nowrap; }
@@ -188,11 +188,11 @@
     .ht-paren-accent { color: var(--orange); font-weight: 600; }
 
     .ht-sub {
-      font-size: clamp(14px, 1.05vw, 16px);
-      line-height: 1.55;
+      font-size: clamp(13px, 1vw, 15px);
+      line-height: 1.5;
       color: var(--taupe);
       max-width: 540px;
-      margin: 0 0 22px;
+      margin: 0 0 18px;
     }
     .ht-sub strong { color: var(--linen); }
 
@@ -200,13 +200,13 @@
     .ht-form { max-width: 540px; }
 
     /* ─── COUNTDOWN ─── */
-    .ht-cd { margin-top: 28px; max-width: 540px; }
+    .ht-cd { margin-top: 18px; max-width: 540px; }
     .ht-cd-label {
-      font-size: 11px;
+      font-size: 10px;
       font-weight: 600;
       letter-spacing: 0.22em;
       color: var(--taupe-dim);
-      margin-bottom: 12px;
+      margin-bottom: 8px;
       text-transform: uppercase;
       text-align: center;
     }
@@ -221,12 +221,12 @@
       background: rgba(180, 166, 144, 0.06);
       border: 1px solid rgba(180, 166, 144, 0.15);
       border-radius: 6px;
-      padding: 12px 6px 8px;
+      padding: 9px 6px 6px;
       text-align: center;
     }
     .ht-cd-num {
       font-weight: 700;
-      font-size: clamp(24px, 2.4vw, 32px);
+      font-size: clamp(20px, 2.1vw, 28px);
       line-height: 1;
       color: var(--orange);
       font-variant-numeric: tabular-nums;
@@ -549,20 +549,30 @@
       .ht-cd-sep { display: none; }
     }
 
-    /* Short viewports — extra-tight rhythm so everything fits 100vh */
-    @media (max-height: 720px) and (min-width: 961px) {
+    /* Short / standard-laptop viewports — tighter rhythm so the longer
+       headline plus form plus countdown all fit within 100vh */
+    @media (max-height: 860px) and (min-width: 961px) {
       .ht-nav { padding: 10px 40px; }
-      .ht-hero { padding: 16px 40px 16px; }
-      .ht-eyebrow { margin-bottom: 10px; }
-      .ht-h1 { font-size: clamp(24px, 3vw, 38px); margin-bottom: 8px; }
-      .ht-h1-paren { margin-bottom: 10px; }
-      .ht-sub { margin-bottom: 12px; line-height: 1.45; }
+      .ht-hero { padding: 14px 40px 14px; gap: 32px; }
+      .ht-eyebrow { margin-bottom: 12px; }
+      .ht-h1 { font-size: clamp(22px, 2.8vw, 36px); margin-bottom: 10px; }
+      .ht-sub { margin-bottom: 12px; line-height: 1.45; font-size: 13px; }
       .ht-cd { margin-top: 12px; }
+      .ht-cd-label { margin-bottom: 6px; }
       .ht-cd-unit { padding: 6px 4px 4px; }
-      .ht-cd-num { font-size: 20px; }
+      .ht-cd-num { font-size: 18px; }
+      .pm-term { max-width: 420px; }
       .pm-term-body { padding: 10px 16px 12px; font-size: 12px; line-height: 1.4; }
       .pm-term-shipped { margin: 6px 0; }
       .pm-term-spacer { height: 6px; }
+    }
+
+    @media (max-height: 720px) and (min-width: 961px) {
+      .ht-h1 { font-size: clamp(20px, 2.4vw, 30px); margin-bottom: 8px; }
+      .ht-eyebrow { margin-bottom: 8px; padding: 4px 9px; font-size: 10px; }
+      .ht-sub { margin-bottom: 10px; }
+      .ht-cd { margin-top: 8px; }
+      .pm-term-body { padding: 8px 14px 10px; font-size: 11px; }
     }
   </style>
 </head>
