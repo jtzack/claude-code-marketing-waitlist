@@ -547,10 +547,24 @@
 
     /* iPad horizontal only — tablet-shaped aspect ratios (max 3:2 = 1.5).
        Standard 16:10 (1.6) and 16:9 (1.78) desktops are excluded.
-       Just shifts the row to vertical center of the hero - column
-       alignment within the row is unchanged. */
+       Tightens the layout so content fits within 100vh (no scroll),
+       then centers it vertically with equal whitespace top and bottom. */
     @media (min-width: 961px) and (max-aspect-ratio: 3/2) {
-      .ht-hero { align-content: center; }
+      .ht-root { min-height: 100dvh; }
+      .ht-hero {
+        align-content: center;
+        padding-top: 18px;
+        padding-bottom: 18px;
+        gap: 32px;
+      }
+      .ht-eyebrow { margin-bottom: 14px; }
+      .ht-h1 { font-size: clamp(24px, 3.2vw, 40px); margin-bottom: 12px; }
+      .ht-sub { margin-bottom: 14px; font-size: 14px; line-height: 1.5; }
+      .ht-cd { margin-top: 14px; }
+      .pm-term { max-width: 420px; }
+      .pm-term-body { padding: 14px 18px 16px; font-size: 13px; }
+      .pm-term-shipped { margin: 8px 0; }
+      .pm-term-spacer { height: 8px; }
     }
 
     /* Very short desktop viewports - modest tightening only */
