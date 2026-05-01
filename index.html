@@ -159,7 +159,7 @@
       letter-spacing: 0.16em;
       color: var(--peach);
       text-transform: uppercase;
-      margin-bottom: 14px;
+      margin-bottom: 20px;
     }
     .ht-eb-sep { color: var(--taupe-dim); }
 
@@ -167,12 +167,12 @@
     .ht-h1 {
       font-family: 'Space Grotesk', sans-serif;
       font-weight: 700;
-      font-size: clamp(32px, 4.2vw, 60px);
-      line-height: 1.0;
+      font-size: clamp(28px, 3.6vw, 50px);
+      line-height: 1.02;
       letter-spacing: -0.035em;
       text-transform: uppercase;
       color: var(--linen);
-      margin: 0 0 12px;
+      margin: 0 0 18px;
       text-wrap: balance;
     }
     .ht-money { color: var(--orange); white-space: nowrap; }
@@ -192,7 +192,7 @@
       line-height: 1.5;
       color: var(--taupe);
       max-width: 540px;
-      margin: 0 0 14px;
+      margin: 0 0 20px;
     }
     .ht-sub strong { color: var(--linen); }
 
@@ -200,7 +200,7 @@
     .ht-form { max-width: 540px; }
 
     /* ─── COUNTDOWN ─── */
-    .ht-cd { margin-top: 14px; max-width: 540px; }
+    .ht-cd { margin-top: 20px; max-width: 540px; }
     .ht-cd-label {
       font-size: 10px;
       font-weight: 600;
@@ -352,27 +352,24 @@
       padding: 0 !important;
     }
 
-    /* Stack input + button as a row */
+    /* Stack input above button (full-width each) */
     .ht-form .formkit-form .formkit-fields {
       display: flex !important;
-      flex-direction: row !important;
-      flex-wrap: nowrap !important;
+      flex-direction: column !important;
       align-items: stretch !important;
       gap: 6px !important;
       margin: 0 !important;
     }
     .ht-form .formkit-form .formkit-field,
-    .ht-form .formkit-form[data-uid="8ad17a4c16"][min-width~="700"] .formkit-fields[data-stacked="false"] .formkit-field,
-    .ht-form .formkit-form[data-uid="8ad17a4c16"][min-width~="800"] .formkit-fields[data-stacked="false"] .formkit-field {
-      flex: 1 1 auto !important;
-      margin: 0 !important;
-      min-width: 0;
-    }
     .ht-form .formkit-form .formkit-submit,
+    .ht-form .formkit-form[data-uid="8ad17a4c16"][min-width~="700"] .formkit-fields[data-stacked="false"] .formkit-field,
+    .ht-form .formkit-form[data-uid="8ad17a4c16"][min-width~="800"] .formkit-fields[data-stacked="false"] .formkit-field,
     .ht-form .formkit-form[data-uid="8ad17a4c16"][min-width~="700"] .formkit-fields[data-stacked="false"] .formkit-submit,
     .ht-form .formkit-form[data-uid="8ad17a4c16"][min-width~="800"] .formkit-fields[data-stacked="false"] .formkit-submit {
-      flex: 0 0 auto !important;
+      flex: 1 0 100% !important;
+      width: 100% !important;
       margin: 0 !important;
+      min-width: 0;
     }
 
     /* Email input — transparent on the wrapper, linen text, taupe placeholder */
@@ -397,9 +394,8 @@
       outline: none !important;
     }
 
-    /* Submit button — solid orange, uppercase, tight letter-spacing.
-       Sized to keep "JOIN THE WAITLIST & UNLOCK EXCLUSIVE BONUSES" on
-       one line at every breakpoint. */
+    /* Submit button — solid orange, uppercase. Now full-width below the
+       input, so we can give the text proper breathing room. */
     .ht-form .formkit-form .formkit-submit {
       background: var(--orange) !important;
       color: var(--linen) !important;
@@ -407,15 +403,15 @@
       border-radius: 5px !important;
       font-family: inherit !important;
       font-weight: 700 !important;
-      font-size: clamp(11px, 1vw, 13px) !important;
-      letter-spacing: 0.06em !important;
+      font-size: 13px !important;
+      letter-spacing: 0.1em !important;
       text-transform: uppercase !important;
       cursor: pointer;
       transition: background 200ms, transform 100ms;
       overflow: hidden;
     }
     .ht-form .formkit-form .formkit-submit > span {
-      padding: 13px 16px !important;
+      padding: 14px 20px !important;
       white-space: nowrap;
       display: block;
     }
