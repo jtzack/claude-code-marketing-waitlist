@@ -124,13 +124,13 @@
     /* ─── HERO MAIN ─── */
     .ht-hero {
       display: grid;
-      grid-template-columns: 1.3fr 1fr;
-      grid-template-rows: minmax(0, 1fr);
+      grid-template-columns: 1.15fr 1fr;
       gap: clamp(28px, 3vw, 48px);
-      padding: clamp(28px, 4vh, 56px) clamp(24px, 3vw, 48px) clamp(20px, 3vh, 36px);
+      padding: clamp(16px, 2.8vh, 36px) clamp(24px, 3vw, 48px) clamp(14px, 2.4vh, 28px);
       max-width: 1320px;
       margin: 0 auto;
       width: 100%;
+      align-items: center;
       position: relative;
       flex: 1;
     }
@@ -159,7 +159,7 @@
       letter-spacing: 0.16em;
       color: var(--peach);
       text-transform: uppercase;
-      margin-bottom: 18px;
+      margin-bottom: 14px;
     }
     .ht-eb-sep { color: var(--taupe-dim); }
 
@@ -167,12 +167,12 @@
     .ht-h1 {
       font-family: 'Space Grotesk', sans-serif;
       font-weight: 700;
-      font-size: clamp(26px, 3vw, 44px);
-      line-height: 1.05;
-      letter-spacing: -0.03em;
+      font-size: clamp(32px, 4.2vw, 60px);
+      line-height: 1.0;
+      letter-spacing: -0.035em;
       text-transform: uppercase;
       color: var(--linen);
-      margin: 0 0 16px;
+      margin: 0 0 12px;
       text-wrap: balance;
     }
     .ht-money { color: var(--orange); white-space: nowrap; }
@@ -188,11 +188,11 @@
     .ht-paren-accent { color: var(--orange); font-weight: 600; }
 
     .ht-sub {
-      font-size: clamp(13px, 1vw, 15px);
+      font-size: clamp(14px, 1.05vw, 16px);
       line-height: 1.5;
       color: var(--taupe);
       max-width: 540px;
-      margin: 0 0 18px;
+      margin: 0 0 14px;
     }
     .ht-sub strong { color: var(--linen); }
 
@@ -200,13 +200,13 @@
     .ht-form { max-width: 540px; }
 
     /* ─── COUNTDOWN ─── */
-    .ht-cd { margin-top: 18px; max-width: 540px; }
+    .ht-cd { margin-top: 14px; max-width: 540px; }
     .ht-cd-label {
       font-size: 10px;
       font-weight: 600;
       letter-spacing: 0.22em;
       color: var(--taupe-dim);
-      margin-bottom: 8px;
+      margin-bottom: 6px;
       text-transform: uppercase;
       text-align: center;
     }
@@ -221,12 +221,12 @@
       background: rgba(180, 166, 144, 0.06);
       border: 1px solid rgba(180, 166, 144, 0.15);
       border-radius: 6px;
-      padding: 9px 6px 6px;
+      padding: 8px 6px 6px;
       text-align: center;
     }
     .ht-cd-num {
       font-weight: 700;
-      font-size: clamp(20px, 2.1vw, 28px);
+      font-size: clamp(22px, 2.2vw, 30px);
       line-height: 1;
       color: var(--orange);
       font-variant-numeric: tabular-nums;
@@ -247,36 +247,28 @@
       padding-bottom: 6px;
     }
 
-    /* Right cell centers the terminal vertically. On desktop, the grid
-       row is 1fr (full hero height) so this centers against the whole
-       hero. On mobile, .ht-right becomes a flex item with content height
-       and centering is a no-op. */
-    .ht-right {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
+    .ht-right { display: flex; justify-content: center; align-items: center; }
 
     /* ─── TERMINAL MOCK ─── */
     .pm-term {
       width: 100%;
-      max-width: 540px;
+      max-width: 480px;
       margin: 0 auto;
       background: #1F1A14;
       border: 1px solid rgba(180, 166, 144, 0.14);
-      border-radius: 22px;
+      border-radius: 20px;
       overflow: hidden;
       box-shadow:
         0 0 0 6px rgba(58, 50, 42, 0.4),
-        0 32px 60px rgba(0, 0, 0, 0.5),
-        0 0 80px rgba(232, 104, 42, 0.14);
+        0 28px 54px rgba(0, 0, 0, 0.5),
+        0 0 72px rgba(232, 104, 42, 0.12);
       font-family: 'Space Grotesk', monospace;
     }
     .pm-term-bar {
       display: grid;
       grid-template-columns: 1fr auto 1fr;
       align-items: center;
-      padding: 16px 20px 14px;
+      padding: 14px 18px 12px;
       border-bottom: 1px solid rgba(180, 166, 144, 0.12);
     }
     .pm-term-lights {
@@ -284,23 +276,23 @@
       gap: 8px;
       align-items: center;
     }
-    .pm-term-light { width: 13px; height: 13px; border-radius: 50%; }
+    .pm-term-light { width: 12px; height: 12px; border-radius: 50%; }
     .pm-term-light-1 { background: var(--orange); }
     .pm-term-light-2 { background: rgba(180, 166, 144, 0.35); }
     .pm-term-light-3 { background: rgba(180, 166, 144, 0.35); }
     .pm-term-title {
-      font-size: 14px;
+      font-size: 13px;
       color: var(--taupe);
       font-weight: 500;
       letter-spacing: 0.01em;
       text-align: center;
       font-family: 'Space Grotesk', monospace;
     }
-    .pm-term-pad { width: 47px; }
+    .pm-term-pad { width: 44px; }
     .pm-term-body {
-      padding: 22px 26px 26px;
-      font-size: 15px;
-      line-height: 1.55;
+      padding: 16px 20px 18px;
+      font-size: 13px;
+      line-height: 1.5;
       font-family: 'Space Grotesk', monospace;
       font-weight: 500;
     }
@@ -557,33 +549,18 @@
       .ht-cd-sep { display: none; }
     }
 
-    /* Short laptop viewports — modest tightening only; H1 size is
-       already responsive via clamp + vw, so we just trim the rhythm */
-    @media (max-height: 820px) and (min-width: 961px) {
-      .ht-nav { padding: 10px 40px; }
-      .ht-hero { padding: 18px 40px 18px; gap: 32px; }
-      .ht-eyebrow { margin-bottom: 14px; }
-      .ht-h1 { margin-bottom: 12px; }
-      .ht-sub { margin-bottom: 14px; line-height: 1.45; }
-      .ht-cd { margin-top: 14px; }
-      .ht-cd-label { margin-bottom: 6px; }
-      .ht-cd-unit { padding: 7px 4px 5px; }
-      .pm-term { max-width: 440px; }
-      .pm-term-body { padding: 12px 18px 14px; font-size: 13px; line-height: 1.45; }
-      .pm-term-shipped { margin: 8px 0; }
-      .pm-term-spacer { height: 8px; }
-    }
-
+    /* Very short desktop viewports - modest tightening only */
     @media (max-height: 700px) and (min-width: 961px) {
-      .ht-hero { padding: 12px 40px 12px; }
-      .ht-h1 { font-size: clamp(22px, 2.4vw, 32px); margin-bottom: 8px; }
-      .ht-eyebrow { margin-bottom: 8px; padding: 4px 9px; font-size: 10px; }
-      .ht-sub { margin-bottom: 10px; font-size: 13px; }
-      .ht-cd { margin-top: 8px; }
-      .pm-term { max-width: 380px; }
-      .pm-term-body { padding: 8px 14px 10px; font-size: 11px; line-height: 1.4; }
-      .pm-term-shipped { margin: 5px 0; }
-      .pm-term-spacer { height: 5px; }
+      .ht-nav { padding: 10px 40px; }
+      .ht-hero { padding: 12px 40px 12px; gap: 28px; }
+      .ht-eyebrow { margin-bottom: 10px; }
+      .ht-h1 { font-size: clamp(26px, 3.4vw, 44px); margin-bottom: 8px; }
+      .ht-sub { margin-bottom: 10px; font-size: 13px; line-height: 1.45; }
+      .ht-cd { margin-top: 10px; }
+      .pm-term { max-width: 400px; }
+      .pm-term-body { padding: 10px 16px 12px; font-size: 12px; line-height: 1.4; }
+      .pm-term-shipped { margin: 6px 0; }
+      .pm-term-spacer { height: 6px; }
     }
   </style>
 </head>
