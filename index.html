@@ -247,7 +247,15 @@
       padding-bottom: 6px;
     }
 
-    .ht-right { display: flex; justify-content: center; align-items: flex-start; }
+    /* Left column tops at row start; right column centers its terminal
+       vertically so it visually balances the taller left content. */
+    .ht-right {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      align-self: stretch;
+      height: 100%;
+    }
 
     /* ─── TERMINAL MOCK ─── */
     .pm-term {
