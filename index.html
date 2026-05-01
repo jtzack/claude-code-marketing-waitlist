@@ -481,6 +481,15 @@
         padding: 14px 16px 16px;
         gap: 12px;
       }
+      /* Cap every block at the same width so the eyebrow, headline,
+         sub copy, form, terminal and countdown all read as one
+         centered column. */
+      .ht-h1, .ht-sub, .ht-form, .ht-cd {
+        max-width: 360px;
+        margin-left: auto;
+        margin-right: auto;
+        width: 100%;
+      }
       .ht-eyebrow {
         gap: 6px;
         padding: 4px 9px;
@@ -528,7 +537,7 @@
       .ht-cd-name { font-size: 7px; letter-spacing: 0.14em; margin-top: 2px; }
       .ht-cd-sep { font-size: 14px; padding-bottom: 4px; }
 
-      .pm-term { max-width: 320px; border-radius: 14px; }
+      .pm-term { max-width: 280px; border-radius: 14px; }
       .pm-term-body { padding: 10px 14px 12px; font-size: 11px; line-height: 1.4; }
       .pm-term-bar { padding: 8px 12px 6px; }
       .pm-term-title { font-size: 10px; }
