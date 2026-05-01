@@ -75,10 +75,11 @@
       justify-content: space-between;
       align-items: center;
       gap: 16px;
-      padding: 22px 48px;
+      padding: 14px 40px;
       border-bottom: 1px solid rgba(180, 166, 144, 0.15);
       position: relative;
       z-index: 2;
+      flex: 0 0 auto;
     }
     .ht-brand {
       display: inline-flex;
@@ -123,13 +124,13 @@
     /* ─── HERO MAIN ─── */
     .ht-hero {
       display: grid;
-      grid-template-columns: 1.2fr 1fr;
-      gap: 56px;
-      padding: 64px 48px 56px;
-      max-width: 1360px;
+      grid-template-columns: 1.15fr 1fr;
+      gap: 40px;
+      padding: 28px 40px 24px;
+      max-width: 1320px;
       margin: 0 auto;
       width: 100%;
-      align-items: start;
+      align-items: center;
       position: relative;
       flex: 1;
     }
@@ -148,17 +149,17 @@
     .ht-eyebrow {
       display: inline-flex;
       align-items: center;
-      gap: 12px;
-      padding: 8px 14px;
+      gap: 10px;
+      padding: 5px 11px;
       border: 1px solid rgba(180, 166, 144, 0.3);
       border-radius: 999px;
       background: rgba(180, 166, 144, 0.05);
-      font-size: 11px;
+      font-size: 10px;
       font-weight: 600;
       letter-spacing: 0.16em;
       color: var(--peach);
       text-transform: uppercase;
-      margin-bottom: 32px;
+      margin-bottom: 14px;
     }
     .ht-eb-sep { color: var(--taupe-dim); }
 
@@ -166,32 +167,32 @@
     .ht-h1 {
       font-family: 'Space Grotesk', sans-serif;
       font-weight: 700;
-      font-size: clamp(44px, 5.6vw, 72px);
-      line-height: 0.98;
-      letter-spacing: -0.04em;
+      font-size: clamp(28px, 3.6vw, 46px);
+      line-height: 1.02;
+      letter-spacing: -0.035em;
       text-transform: uppercase;
       color: var(--linen);
-      margin: 0 0 18px;
+      margin: 0 0 10px;
       text-wrap: balance;
     }
     .ht-money { color: var(--orange); white-space: nowrap; }
 
     .ht-h1-paren {
-      font-size: clamp(17px, 1.6vw, 20px);
+      font-size: clamp(13px, 1.2vw, 16px);
       line-height: 1.4;
       color: var(--taupe);
       font-weight: 500;
-      margin: 0 0 28px;
+      margin: 0 0 14px;
       max-width: 560px;
     }
     .ht-paren-accent { color: var(--orange); font-weight: 600; }
 
     .ht-sub {
-      font-size: 16px;
-      line-height: 1.6;
+      font-size: 14px;
+      line-height: 1.55;
       color: var(--taupe);
       max-width: 540px;
-      margin: 0 0 28px;
+      margin: 0 0 16px;
     }
     .ht-sub strong { color: var(--linen); }
 
@@ -199,11 +200,11 @@
     .ht-form { max-width: 540px; }
 
     .ht-form-fine {
-      margin-top: 14px;
+      margin-top: 8px;
       display: flex;
       align-items: center;
       gap: 8px;
-      font-size: 13px;
+      font-size: 12px;
       font-weight: 500;
       color: var(--taupe);
     }
@@ -215,13 +216,13 @@
     .ht-fine-accent { color: var(--orange); font-weight: 600; }
 
     /* ─── COUNTDOWN ─── */
-    .ht-cd { margin-top: 40px; max-width: 540px; }
+    .ht-cd { margin-top: 18px; max-width: 540px; }
     .ht-cd-label {
-      font-size: 11px;
+      font-size: 10px;
       font-weight: 600;
       letter-spacing: 0.22em;
       color: var(--taupe-dim);
-      margin-bottom: 16px;
+      margin-bottom: 8px;
       text-transform: uppercase;
       text-align: center;
     }
@@ -236,12 +237,12 @@
       background: rgba(180, 166, 144, 0.06);
       border: 1px solid rgba(180, 166, 144, 0.15);
       border-radius: 6px;
-      padding: 14px 6px 8px;
+      padding: 8px 4px 6px;
       text-align: center;
     }
     .ht-cd-num {
       font-weight: 700;
-      font-size: clamp(28px, 3vw, 36px);
+      font-size: clamp(20px, 2.2vw, 28px);
       line-height: 1;
       color: var(--orange);
       font-variant-numeric: tabular-nums;
@@ -250,16 +251,16 @@
     .ht-cd-name {
       font-size: 9px;
       font-weight: 600;
-      letter-spacing: 0.2em;
+      letter-spacing: 0.18em;
       color: var(--taupe-dim);
-      margin-top: 6px;
+      margin-top: 4px;
       text-transform: uppercase;
     }
     .ht-cd-sep {
       color: var(--taupe-dim);
-      font-size: 24px;
+      font-size: 18px;
       font-weight: 300;
-      padding-bottom: 8px;
+      padding-bottom: 6px;
     }
 
     .ht-right { display: flex; justify-content: center; align-items: flex-start; }
@@ -267,24 +268,23 @@
     /* ─── TERMINAL MOCK ─── */
     .pm-term {
       width: 100%;
-      max-width: 460px;
+      max-width: 420px;
       margin: 0 auto;
       background: #1F1A14;
       border: 1px solid rgba(180, 166, 144, 0.14);
-      border-radius: 22px;
+      border-radius: 18px;
       overflow: hidden;
       box-shadow:
-        0 0 0 6px rgba(58, 50, 42, 0.4),
-        0 30px 60px rgba(0, 0, 0, 0.5),
-        0 0 80px rgba(232, 104, 42, 0.12);
+        0 0 0 5px rgba(58, 50, 42, 0.4),
+        0 24px 48px rgba(0, 0, 0, 0.5),
+        0 0 64px rgba(232, 104, 42, 0.12);
       font-family: 'Space Grotesk', monospace;
-      transform: translateY(-4px);
     }
     .pm-term-bar {
       display: grid;
       grid-template-columns: 1fr auto 1fr;
       align-items: center;
-      padding: 16px 20px 14px;
+      padding: 10px 16px 8px;
       border-bottom: 1px solid rgba(180, 166, 144, 0.12);
     }
     .pm-term-lights {
@@ -292,34 +292,34 @@
       gap: 8px;
       align-items: center;
     }
-    .pm-term-light { width: 13px; height: 13px; border-radius: 50%; }
+    .pm-term-light { width: 11px; height: 11px; border-radius: 50%; }
     .pm-term-light-1 { background: var(--orange); }
     .pm-term-light-2 { background: rgba(180, 166, 144, 0.35); }
     .pm-term-light-3 { background: rgba(180, 166, 144, 0.35); }
     .pm-term-title {
-      font-size: 14px;
+      font-size: 12px;
       color: var(--taupe);
       font-weight: 500;
       letter-spacing: 0.01em;
       text-align: center;
       font-family: 'Space Grotesk', monospace;
     }
-    .pm-term-pad { width: 47px; }
+    .pm-term-pad { width: 41px; }
     .pm-term-body {
-      padding: 24px 24px 28px;
-      font-size: 16px;
-      line-height: 1.5;
+      padding: 14px 18px 18px;
+      font-size: 13px;
+      line-height: 1.45;
       font-family: 'Space Grotesk', monospace;
       font-weight: 500;
     }
     .pm-term-line {
       display: flex;
       align-items: baseline;
-      gap: 8px;
-      margin: 4px 0;
+      gap: 6px;
+      margin: 1px 0;
       flex-wrap: wrap;
     }
-    .pm-term-indent { padding-left: 28px; }
+    .pm-term-indent { padding-left: 22px; }
     .pm-term-prompt { color: var(--orange); font-weight: 700; flex: 0 0 auto; }
     .pm-term-arrow { color: var(--taupe); flex: 0 0 auto; }
     .pm-term-cmd { color: var(--linen); font-weight: 600; }
@@ -328,14 +328,14 @@
     .pm-term-shipped {
       color: var(--linen);
       font-weight: 600;
-      margin: 14px 0;
+      margin: 8px 0;
     }
     .pm-term-check { color: var(--linen); font-weight: 700; flex: 0 0 auto; }
-    .pm-term-spacer { height: 14px; }
-    .pm-term-spacer-sm { height: 8px; }
+    .pm-term-spacer { height: 8px; }
+    .pm-term-spacer-sm { height: 4px; }
     .pm-term-caret {
       display: inline-block;
-      width: 10px; height: 18px;
+      width: 8px; height: 14px;
       background: var(--linen);
       vertical-align: -2px;
       animation: pm-blink 1.2s steps(2) infinite;
@@ -351,7 +351,7 @@
       background: rgba(180, 166, 144, 0.08);
       border: 1px solid rgba(180, 166, 144, 0.25);
       border-radius: 8px;
-      padding: 6px;
+      padding: 5px;
       transition: border-color 200ms, background 200ms;
       max-width: 540px;
       margin: 0;
@@ -398,9 +398,9 @@
       outline: none !important;
       box-shadow: none !important;
       font-family: inherit !important;
-      font-size: 16px !important;
+      font-size: 14px !important;
       font-weight: 500 !important;
-      padding: 14px 14px !important;
+      padding: 10px 12px !important;
       color: var(--linen) !important;
       width: 100% !important;
     }
@@ -429,7 +429,7 @@
       overflow: hidden;
     }
     .ht-form .formkit-form .formkit-submit > span {
-      padding: 14px 24px !important;
+      padding: 11px 20px !important;
       white-space: nowrap;
       display: block;
     }
@@ -457,61 +457,118 @@
     /* ─── RESPONSIVE ─── */
     /* Tablet — stack columns */
     @media (max-width: 960px) {
-      .ht-nav { padding: 18px 24px; }
+      .ht-nav { padding: 12px 24px; }
       .ht-hero {
         grid-template-columns: 1fr;
-        gap: 48px;
-        padding: 40px 24px 48px;
+        gap: 20px;
+        padding: 18px 24px 18px;
+        align-items: start;
       }
       .ht-h1-paren, .ht-sub, .ht-form, .ht-cd { max-width: 100%; }
       .ht-right { order: 2; }
       .ht-glow {
-        top: -150px; right: -200px;
-        width: 500px; height: 500px;
+        top: -120px; right: -160px;
+        width: 420px; height: 420px;
       }
+      .pm-term { max-width: 380px; }
     }
 
-    /* Mobile — stack form vertically + smaller nav */
+    /* Mobile — stack form vertically + smaller everything */
     @media (max-width: 640px) {
       .ht-nav {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 10px;
-        padding: 16px 20px;
+        gap: 8px;
+        padding: 8px 16px;
       }
+      .ht-brand { font-size: 12px; gap: 8px; }
       .ht-brand-tag { display: none; }
-      .ht-hero { padding: 32px 20px 40px; gap: 40px; }
-      .ht-eyebrow { margin-bottom: 24px; gap: 8px; padding: 6px 12px; }
-      .ht-h1 { margin-bottom: 14px; }
-      .ht-h1-paren { margin-bottom: 22px; }
+      .ht-nav-status { font-size: 9px; letter-spacing: 0.14em; gap: 6px; }
+      .ht-pulse { width: 6px; height: 6px; }
+
+      .ht-hero {
+        padding: 14px 16px 16px;
+        gap: 16px;
+      }
+      .ht-eyebrow {
+        margin-bottom: 10px;
+        gap: 6px;
+        padding: 4px 9px;
+        font-size: 9px;
+        letter-spacing: 0.14em;
+      }
+      .ht-h1 {
+        font-size: clamp(20px, 5.6vw, 28px);
+        margin-bottom: 8px;
+        line-height: 1.05;
+      }
+      .ht-h1-paren {
+        font-size: 12px;
+        margin-bottom: 10px;
+      }
+      .ht-sub {
+        font-size: 12px;
+        line-height: 1.5;
+        margin-bottom: 10px;
+      }
 
       /* Stack form: input above, full-width button below */
       .ht-form .formkit-form .formkit-fields {
         flex-direction: column !important;
-        gap: 6px !important;
+        gap: 5px !important;
       }
       .ht-form .formkit-form .formkit-field,
       .ht-form .formkit-form .formkit-submit {
         flex: 1 0 100% !important;
         width: 100% !important;
       }
-      .ht-form .formkit-form .formkit-submit > span {
-        padding: 14px 20px !important;
-        font-size: 12px;
+      .ht-form .formkit-form .formkit-input {
+        font-size: 13px !important;
+        padding: 9px 11px !important;
       }
+      .ht-form .formkit-form .formkit-submit > span {
+        padding: 10px 16px !important;
+        font-size: 11px;
+        letter-spacing: 0.1em;
+      }
+      .ht-form-fine { font-size: 11px; margin-top: 6px; }
 
-      .ht-cd-unit { padding: 10px 4px 6px; }
-      .ht-cd-name { font-size: 8px; letter-spacing: 0.16em; }
-      .ht-cd-sep { font-size: 18px; padding-bottom: 6px; }
+      .ht-cd { margin-top: 10px; }
+      .ht-cd-label { font-size: 9px; margin-bottom: 6px; }
+      .ht-cd-unit { padding: 6px 2px 4px; }
+      .ht-cd-num { font-size: 18px; }
+      .ht-cd-name { font-size: 7px; letter-spacing: 0.14em; margin-top: 2px; }
+      .ht-cd-sep { font-size: 14px; padding-bottom: 4px; }
 
-      .pm-term-body { padding: 18px 18px 22px; font-size: 14px; }
-      .pm-term-bar { padding: 12px 16px 10px; }
-      .pm-term-title { font-size: 12px; }
+      .pm-term { max-width: 320px; border-radius: 14px; }
+      .pm-term-body { padding: 10px 14px 12px; font-size: 11px; line-height: 1.4; }
+      .pm-term-bar { padding: 8px 12px 6px; }
+      .pm-term-title { font-size: 10px; }
+      .pm-term-light { width: 9px; height: 9px; }
+      .pm-term-pad { width: 33px; }
+      .pm-term-shipped { margin: 5px 0; }
+      .pm-term-spacer { height: 5px; }
+      .pm-term-spacer-sm { height: 3px; }
+      .pm-term-indent { padding-left: 16px; }
     }
 
     @media (max-width: 380px) {
       .ht-cd-grid { gap: 2px; }
       .ht-cd-sep { display: none; }
+    }
+
+    /* Short viewports — extra-tight rhythm so everything fits 100vh */
+    @media (max-height: 720px) and (min-width: 961px) {
+      .ht-nav { padding: 10px 40px; }
+      .ht-hero { padding: 16px 40px 16px; }
+      .ht-eyebrow { margin-bottom: 10px; }
+      .ht-h1 { font-size: clamp(24px, 3vw, 38px); margin-bottom: 8px; }
+      .ht-h1-paren { margin-bottom: 10px; }
+      .ht-sub { margin-bottom: 12px; line-height: 1.45; }
+      .ht-cd { margin-top: 12px; }
+      .ht-cd-unit { padding: 6px 4px 4px; }
+      .ht-cd-num { font-size: 20px; }
+      .pm-term-body { padding: 10px 16px 12px; font-size: 12px; line-height: 1.4; }
+      .pm-term-shipped { margin: 6px 0; }
+      .pm-term-spacer { height: 6px; }
     }
   </style>
 </head>
