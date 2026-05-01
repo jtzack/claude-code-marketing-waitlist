@@ -545,17 +545,12 @@
       .ht-cd-sep { display: none; }
     }
 
-    /* iPad horizontal only — tablet-shaped aspect ratios (4:3 to 3:2)
-       above the mobile breakpoint. Standard desktop laptops (16:10 = 1.6,
-       16:9 = 1.78) are excluded by the max-aspect-ratio: 3/2 cutoff.
-       Both columns top-align to each other and the whole row centers
-       vertically so the eyebrow and terminal share a clean top edge
-       with equal whitespace above and below. */
+    /* iPad horizontal only — tablet-shaped aspect ratios (max 3:2 = 1.5).
+       Standard 16:10 (1.6) and 16:9 (1.78) desktops are excluded.
+       Just shifts the row to vertical center of the hero - column
+       alignment within the row is unchanged. */
     @media (min-width: 961px) and (max-aspect-ratio: 3/2) {
-      .ht-hero {
-        align-items: start;
-        align-content: center;
-      }
+      .ht-hero { align-content: center; }
     }
 
     /* Very short desktop viewports - modest tightening only */
