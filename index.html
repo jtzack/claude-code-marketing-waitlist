@@ -545,11 +545,20 @@
       .ht-cd-sep { display: none; }
     }
 
-    /* iPad horizontal only — tablet-shaped aspect ratios (max 3:2 = 1.5).
-       Standard 16:10 (1.6) and 16:9 (1.78) desktops are excluded.
+    /* iPad portrait (and similar tablet-portrait widths) — add side
+       gutters so the hero content doesn't stretch edge-to-edge. */
+    @media (min-width: 641px) and (max-width: 1100px) and (orientation: portrait) {
+      .ht-nav  { padding-left: clamp(40px, 8vw, 80px); padding-right: clamp(40px, 8vw, 80px); }
+      .ht-hero { padding-left: clamp(56px, 11vw, 120px); padding-right: clamp(56px, 11vw, 120px); }
+    }
+
+    /* iPad horizontal only — tablet-shaped aspect ratios (max 3:2 = 1.5)
+       in landscape orientation. Standard 16:10 (1.6) and 16:9 (1.78)
+       desktops are excluded by the max-aspect-ratio. iPad Pro 12.9 in
+       portrait (1024x1366, aspect 0.75) is excluded by orientation.
        Tightens the layout so content fits within 100vh (no scroll),
        then centers it vertically with equal whitespace top and bottom. */
-    @media (min-width: 961px) and (max-aspect-ratio: 3/2) {
+    @media (min-width: 961px) and (max-aspect-ratio: 3/2) and (orientation: landscape) {
       .ht-root { min-height: 100dvh; }
       .ht-hero {
         align-content: center;
